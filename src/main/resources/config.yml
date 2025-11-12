@@ -1,0 +1,144 @@
+config-version: 1
+
+prefix: "&b&l[GIDEONFLY]&f "
+vip-auto-fly: true
+join-messages: true
+vip-broadcast: true
+
+
+messages:
+  fly-on: "%prefix% &a✈ Flight enabled."
+  fly-off: "%prefix% &c🛑 Flight disabled."
+  no-permission: "%prefix% &cYou don’t have permission."
+  vip-entry: "%prefix% &bWelcome VIP! Auto-flight activated."
+  no-spawn: "%prefix% &c⚠ VIP spawn not set or invalid."
+  config-saved: "%prefix% &aConfiguration saved successfully."
+  config-reloaded: "%prefix% &eConfiguration reloaded successfully."
+
+leave-messages:
+  enabled: true
+  message: "&c✈ %luckperms_prefix%%player_name% has left the server!"
+
+join-broadcast: "&a✈ &e%luckperms_prefix%%player_name% &ahas joined the server!"
+join-vip-broadcast: "&6⭐ %luckperms_prefix%%player_name% &ehas arrived from the sky!"
+
+
+effects:
+  RAYO:
+    name: "&e⚡ Friendly Lightning"
+    description: "&7Lightning effect (no damage)."
+  FUEGO:
+    name: "&d🎇 Firework"
+    description: "&7Colorful firework on join."
+  VOLCAN:
+    name: "&c🌋 Wool Volcano"
+    description: "&7Throws colorful wool blocks."
+  NINGUNO:
+    name: "&8❌ No Effect"
+    description: "&7No visual join effect."
+
+sounds:
+  fly-on: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  fly-off: "BLOCK_NOTE_BLOCK_BASS"
+  menu-open: "BLOCK_NOTE_BLOCK_PLING"
+  success: "ENTITY_PLAYER_LEVELUP"
+  error: "BLOCK_NOTE_BLOCK_BASS"
+  click: "UI_BUTTON_CLICK"
+menus:
+
+  setup:
+    title: "&b&lGideonFly &8| &fSetup Menu"
+    items:
+      spawn:
+        name: "&b🧭 Set VIP Spawn"
+        lore:
+          - "&7Configure the VIP spawn location."
+      join:
+        name: "&a💬 Join Messages"
+        lore:
+          - "&7Enable or disable join messages."
+      prefix:
+        name: "&d🏷️ Change Prefix"
+        lore:
+          - "&7Change the plugin's prefix."
+      config:
+        name: "&e💾 Save / Reload Config"
+        lore:
+          - "&7Open the configuration manager."
+
+  spawn:
+    title: "&b&lGideonFly &8| &fVIP Spawn"
+    items:
+      set:
+        name: "&a✅ Set VIP Spawn"
+        lore:
+          - "&7Save your current position as VIP spawn."
+      remove:
+        name: "&c❌ Remove VIP Spawn"
+        lore:
+          - "&7Delete the existing VIP spawn point."
+      back:
+        name: "&e⬅ Back"
+        lore:
+          - "&7Return to setup menu."
+
+  join:
+    title: "&b&lGideonFly &8| &fJoin Messages"
+    items:
+      enable:
+        name: "&a✅ Enable Join Messages"
+        lore:
+          - "&7Turns ON the global join messages."
+      disable:
+        name: "&c❌ Disable Join Messages"
+        lore:
+          - "&7Turns OFF the global join messages."
+      back:
+        name: "&e⬅ Back"
+        lore:
+          - "&7Return to setup menu."
+
+  prefix:
+    title: "&b&lGideonFly &8| &fChange Prefix"
+    message: "&dType the new prefix in chat. Example: &b[GideonFly]&f"
+    success: "%prefix%&aPrefix updated to: %prefix%"
+    cancel: "%prefix%&cPrefix change cancelled."
+
+  config:
+    title: "&b&lGideonFly &8| &fConfig Manager"
+    items:
+      save:
+        name: "&a💾 Save Configuration"
+        lore:
+          - "&7Saves all plugin configuration files."
+      reload:
+        name: "&b🔄 Reload Configuration"
+        lore:
+          - "&7Reloads all plugin configuration files."
+      back:
+        name: "&e⬅ Back"
+        lore:
+          - "&7Return to setup menu."
+
+  effects:
+    title: "&b&lGideonFly &8| &fJoin Effects"
+    rayo:
+      name: "&e⚡ Friendly Lightning"
+      lore:
+        - "&7Strikes lightning (no damage)."
+    fuego:
+      name: "&d🎇 Firework"
+      lore:
+        - "&7Launches a firework when joining."
+    volcan:
+      name: "&c🌋 Wool Volcano"
+      lore:
+        - "&7Throws colorful wool blocks."
+    ninguno:
+      name: "&8❌ No Effect"
+      lore:
+        - "&7Disable any join effect."
+    back:
+      name: "&e⬅ Close"
+      lore:
+        - "&7Return to setup menu."
